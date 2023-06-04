@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@600&display=swap');
+.App {
+  text-align: center;
+  align-items: center;
+  height: auto;
+  display: flex;
+  width: 100vw;
+  /* background-color: #9933ff; */
+  flex-direction: column;
+  /* padding-top: 40px; */
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+.post {
+  width: 400px;
+  height: 300px;
+  border: 2px solid lightgray;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  box-shadow: rgba(99, 99, 99, 0.2) 5x 5px 47px 5px;
+}
+.post:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 69px 0px;
+  cursor: pointer;
+}
+.title {
+  color: white;
+  font-size: 30px;
+  flex: 20%;
+  border-bottom: 1px solid lightgray;
+  background-color: #ff3399;
+  display: flex;
+  justify-content: center;
+
+  counter-reset: white;
+  font-family: 'Baloo Bhai 2', cursive;
+}
+.body {
+  flex: 60%;
+  display: grid;
+  place-content: center;
+}
+.footer {
+  flex: 20%;
+  border-top: 1px solid lightgray;
+  display: flex;
+  align-items: center;
+  padding-left: 15px;
+  background-color: white;
+  color: #ff3399;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+/* This is the CSS of createPost Compoenent */
+.createPostPage {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ececec;
+}
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 500px;
+  height: auto;
+  padding: 20px;
+  border: 5px solid purple;
+  border-radius: 5px;
+  box-shadow: 6px 6px 12px #c7c4c4, -6px -6px 12px;
+}
+.formContainer #inputCreatePost {
+  height: 40px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px solid gray;
+  border-radius: 5px;
+  padding-left: 10px;
+  font-size: 20px;
+}
+.formContainer button {
+  margin-top: 15px;
+  height: 40px;
+  border: none;
+  background-color: #ff3399;
+  border-radius: 5px;
+  color: black;
+}
+.formContainer button:hover {
+  cursor: pointer;
+  background-color: #ff3399;
+}
+span {
+  color: red;
+  font-weight: bold;
+  font-family: cursive;
+}
+.navbar {
+  width: 100vw;
+  height: 70px;
+  background-color: #ff3399;
+  display: flex;
+  align-items: center;
+
+  font-family: 'Baloo Bhai 2', cursive;
+}
+.navbar a {
+  text-decoration: none;
+  margin-left: 30px;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'Baloo Bhai 2', cursive;
+}
+.loginwholecontainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100vw;
+}
+.navusername {
+  color: white;
+  font-weight: bold;
+}
+.navloginleft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navloginright {
+  display: flex;
+}
+.navbar button {
+  height: 43px;
+  width: 100px;
+  margin-top: 14px;
+  margin-left: 15px;
+  font-family: 'Baloo Bhai 2', cursive;
+}
+.navcreatepost {
+  font-size: 24px;
+  font-family: 'Baloo Bhai 2', cursive;
+  font-weight: bold;
+}
+.navcreatepost:hover {
+  font-size: 27px;
+}
+.navhome {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'Baloo Bhai 2', cursive;
+}
+.navhome:hover {
+  font-size: 27px;
+}
+.navbar button:hover {
+  background-color: #ff3399;
+  font-family: 'Baloo Bhai 2', cursive;
+}
+/* INDIVIDUAL POST */
+.postPage {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+.leftSide {
+  flex: 50%;
+  height: calc(100vh - 70px);
+  display: grid;
+  place-items: center;
+  border: 2px solid grey;
+}
+
+#individual {
+  height: 500px;
+  width: 600px;
+}
+.leftContainer {
+  display: flex;
+  flex-direction: column;
+  height: 89%;
+  width: 78%;
+  box-shadow: rgba(99, 99, 99, 0.2) 0x 0px 8px 0px;
+  border: 1px solid gray;
+}
+
+#individual .title,
+#individual .footer {
+  flex: 20%;
+  border: 1px solid gray;
+  font-size: 30px;
+  background-color: #9933ff;
+  justify-content: center;
+  align-items: center;
+}
+.footer button {
+  width: 30%;
+  margin-left: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+.footermanager {
+  display: flex;
+  /* width: 100vw; */
+  justify-content: space-between;
+  align-items: center;
+}
+.likesLength {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.unlikepost {
+  opacity: 50%;
+}
+
+#individual .postText {
+  display: grid;
+  place-items: center;
+  flex: 80%;
+}
+
+#individual .body {
+  font-size: 25px;
+}
+.rightSide {
+  flex: 50%;
+  height: calc(100vh - 70px);
+  display: grid;
+  place-items: center;
+  flex-direction: column;
+}
+.rightSide .addCommentContainer {
+  flex: 20%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  margin-top: 25px;
+  /* border: 2px solid red; */
+}
+.addCommentContainer input,
+button {
+  width: 300px;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+}
+
+.addCommentContainer button {
+  background-color: #9933ff;
+  color: white;
+}
+
+.addCommentContainer input {
+  border: 2px solid #9933ff;
+}
+
+.rightSide .listOfComments {
+  flex: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.listOfComments .comment {
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: space-between;
+  width: 70%;
+  height: auto;
+  padding: 30px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+
+/*===== VARIABLES CSS =====*/
+:root{
+  /*===== Colores =====*/
+  --first-color: #ff3399;
+  --first-color-dark: #23004D;
+  --first-color-light: #A49EAC;
+  --first-color-lighten: #F2F2F2;
+
+  /*===== Font and typography =====*/
+  --body-font: 'Open Sans', sans-serif;
+  --h1-font-size: 1.5rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+}
+
+@media screen and (min-width: 768px){
+  :root{
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+  }
+}
+
+/*===== BASE =====*/
+*,::before,::after{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  color: var(--first-color-dark);
+}
+
+h1{
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*===== LOGIN =====*/
+.login{
+  display: grid;
+  grid-template-columns: 100%;
+  height: 100vh;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+.login__content{
+  display: grid;
+}
+
+.login__img{
+  justify-self: center;
+  background-image: url("./img/img-login.svg");
+  background-repeat: no-repeat;
+}
+
+.login__img img{
+  width: 310px;
+  margin-top: 1.5rem;
+}
+
+.login__forms{
+  position: relative;
+  height: 368px;
+}
+
+.login__registre, .login__create{
+  position: absolute;
+  bottom: 1rem;
+  width: 100%;
+  background-color: var(--first-color-lighten);
+  padding: 2rem 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(35,0,77,.2);
+  animation-duration: .4s;
+  animation-name: animate-login;
+}
+
+@keyframes animate-login{
+  0%{
+    transform: scale(1,1);
+  }
+  50%{
+    transform: scale(1.1,1.1);
+  }
+  100%{
+    transform: scale(1,1);
+  }
+}
+
+.login__title{
+  font-size: var(--h1-font-size);
+  margin-bottom: 2rem;
+}
+
+.login__box{
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  column-gap: .5rem;
+  padding: 1.125rem 1rem;
+  background-color: #FFF;
+  margin-top: 1rem;
+  border-radius: .5rem;
+}
+
+.login__icon{
+  font-size: 1.5rem;
+  color: var(--first-color);
+}
+
+.login__input{
+  border: none;
+  outline: none;
+  font-size: var(--normal-font-size);
+  font-weight: 700;
+  color: var(--first-color-dark);
+}
+
+.login__input::placeholder{
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
+  color: var(--first-color-light);
+}
+
+.login__forgot{
+  display: block;
+  width: max-content;
+  margin-left: auto;
+  margin-top: .5rem;
+  font-size: var(--small-font-size);
+  font-weight: 600;
+  color: var(--first-color-light);
+}
+
+.login__button{
+  display: block;
+  padding: 1rem;
+  margin: 2rem 0;
+  background-color: var(--first-color);
+  color: #FFF;
+  font-weight: 600;
+  text-align: center;
+  border-radius: .5rem;
+  transition: .3s;
+}
+
+.login__button:hover{
+  background-color: var(--first-color-dark);
+}
+
+.login__account, .login__signin, .login__signup{
+  font-weight: 600;
+  font-size: var(--small-font-size);
+}
+
+.login__account{
+  color: var(--first-color-dark);
+}
+
+.login__signin, .login__signup{
+  color: var(--first-color);
+  cursor: pointer;
+}
+
+.login__social{
+  margin-top: 2rem;
+}
+
+.login__social-icon{
+  font-size: 1.5rem;
+  color: var(--first-color-dark);
+  margin: 0 1.5rem;
+}
+
+/*Show login*/
+.block{
+  display: block;
+}
+
+/*Hidden login*/
+.none{
+  display: none;
+}
+
+/* ===== MEDIA QUERIES =====*/
+@media screen and (min-width: 576px){
+  .login__forms{
+    width: 348px;
+    justify-self: center;
+  }
+}
+
+@media screen and (min-width: 1024px){
+  .login{
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .login__content{
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    align-items: center;
+    margin-left: 10rem;
+  }
+
+  .login__img{
+    display: flex;
+    width: 600px;
+    height: 588px;
+    background-color: var(--first-color-lighten);
+    border-radius: 1rem;
+    padding-left: 1rem;
+  }
+
+  .login__img img{
+    width: 390px;
+    margin-top: 0;
+  }
+
+  .login__registre, .login__create{
+    left: -11rem;
+  }
+
+  .login__registre{
+    bottom: -2rem;
+  }
+
+  .login__create{
+    bottom: -5.5rem;
+  }
+}
